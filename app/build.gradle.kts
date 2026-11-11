@@ -6,7 +6,6 @@ plugins {
 val compileSdkVersion = 35
 val minSdkVersion = 26
 val targetSdkVersion = 34
-val ndkVersion = "28.2.13676358"
 
 android {
     namespace = "com.opencode"
@@ -24,11 +23,6 @@ android {
             useSupportLibrary = true
         }
 
-        externalNativeBuild {
-            cmake {
-                arguments += "-DANDROID_STL=c++_shared"
-            }
-        }
     }
 
     buildFeatures {
@@ -42,13 +36,6 @@ android {
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
-        }
-    }
-
-    externalNativeBuild {
-        cmake {
-            path = file("src/main/jni/CMakeLists.txt")
-            version = "3.22.1"
         }
     }
 
@@ -75,22 +62,9 @@ android {
         jvmTarget = "17"
     }
 
-    // Allow any file type upload - no restrictions
+    // Allow ZIP uploads
     aaptOptions {
-        noCompress += "jpg"
-        noCompress += "jpeg"
-        noCompress += "png"
-        noCompress += "gif"
-        noCompress += "webp"
-        noCompress += "mp4"
-        noCompress += "mov"
-        noCompress += "avi"
-        noCompress += "mp3"
-        noCompress += "wav"
         noCompress += "zip"
-        noCompress += "tar"
-        noCompress += "gz"
-        noCompress += "7z"
     }
 }
 
