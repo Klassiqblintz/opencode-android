@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  OpenCode Android - String resources.
+  All UI text is localized through this file.
+-->
+<resources>
+    <!-- App name -->
+    <string name="app_name">OpenCode Android</string>
+
+    <!-- Navigation labels -->
+    <string name="nav_home">Home</string>
+    <string name="nav_sessions">Sessions</string>
+    <string name="nav_projects">Projects</string>
+    <string name="nav_builds">Builds</string>
+    <string name="nav_settings">Settings</string>
+
+    <!-- Main screens -->
+    <string name="title_chat">Chat</string>
+    <string name="title_terminal">Terminal</string>
+    <string name="title_preview">Preview</string>
+    <string name="title_builds">Builds</string>
+    <string name="title_settings">Settings</string>
+    <string name="title_projects">Projects</string>
+    <string name="title_sessions">Sessions</string>
+    <string name="title_import">Import Project</string>
+    <string name="title_upload">Upload Files</string>
+    <string name="title_agent_select">Select Agent</string>
+    <string name="title_model_config">Configure Model</string>
+    <string name="title_permissions">Permissions</string>
+    <string name="title_skills">Skills</string>
+    <string name="title_mcp_servers">MCP Servers</string>
+    <string name="title_about">About</string>
+
+    <!-- Chat input -->
+    <string name="chat_input_hint">Ask the agent to code…</string>
+    <string name="chat_send">Send</string>
+    <string name="chat_new_session">New Session</string>
+
+    <!-- Terminal -->
+    <string name="terminal_prompt">opencode@android:~$ </string>
+    <string name="terminal_execute">Execute</string>
+    <string name="terminal_clear">Clear</string>
+
+    <!-- Preview -->
+    <string name="preview_web_title">Web Preview</string>
+    <string name="preview_apk_title">APK Launch</string>
+    <string name="preview_load">Load Preview</string>
+    <string name="preview_url_hint">http://localhost:8080</string>
+    <string name="preview_no_apps">No apps built yet. Build an APK first.</string>
+    <string name="preview_launch_apk">Launch APK</string>
+
+    <!-- Builds -->
+    <string name="build_title">Builds</string>
+    <string name="build_start">Start Build</string>
+    <string name="build_in_progress">Building…</string>
+    <string name="build_successful">BUILD SUCCESSFUL</string>
+    <string name="build_failed">BUILD FAILED</string>
+    <string name="build_install">Install APK</string>
+    <string name="build_download">Download ZIP</string>
+    <string name="build_debug">Debug APK</string>
+    <string name="build_release">Release APK</string>
+
+    <!-- Project types -->
+    <string name="project_type_flutter">Flutter</string>
+    <string name="project_type_kotlin">Kotlin / Compose</string>
+    <string name="project_type_java">Java / Gradle</string>
+    <string name="project_type_native">Native C/C++</string>
+    <string name="project_type_mixed">Mixed</string>
+
+    <!-- Imports -->
+    <string name="import_zip_title">Import from ZIP</string>
+    <string name="import_folder_title">Import from Folder</string>
+    <string name="import_select_zip">Select ZIP File</string>
+    <string name="import_select_folder">Select Folder</string>
+    <string name="import_complete">Project imported successfully!</string>
+    <string name="import_open">Open Project</string>
+
+    <!-- Uploads -->
+    <string name="upload_title">Upload Files</string>
+    <string name="upload_select">Select Files</string>
+    <string name="upload_any_type">Upload any file type</string>
+    <string name="upload_done">Done</string>
+    <string name="upload_file_count">%d files</string>
+
+    <!-- Permissions -->
+    <string name="permission_shell">Shell Commands</string>
+    <string name="permission_edit">File Editing</string>
+    <string name="permission_subagent">Subagent Spawning</string>
+    <string name="permission_skill">Skill Loading</string>
+    <string name="permission_web">Web Fetch &amp; Search</string>
+    <string name="permission_mcp">MCP Tool Calls</string>
+    <string name="permission_allow">Allow</string>
+    <string name="permission_ask">Ask</string>
+    <string name="permission_deny">Deny</string>
+
+    <!-- Settings -->
+    <string name="setting_notifications">Push Notifications</string>
+    <string name="setting_notifications_desc">Get notified when builds complete, permissions needed, etc.</string>
+    <string name="setting_agent_title">Agent Selection</string>
+    <string name="setting_agent_desc">Choose: OpenCode, DeepSeek, Claude Code, Pi, or Custom</string>
+    <string name="setting_models_title">Models &amp; API Keys</string>
+    <string name="setting_models_desc">Configure cloud APIs and local GGUF models</string>
+    <string name="setting_mcp_title">MCP Servers</string>
+    <string name="setting_mcp_desc">Connect and manage MCP servers</string>
+    <string name="setting_skills_title">Skills</string>
+    <string name="setting_skills_desc">Manage agent skills and workflows</string>
+    <string name="setting_permissions_title">Permissions</string>
+    <string name="setting_permissions_desc">Configure tool and action permissions</string>
+    <string name="setting_storage_title">Storage</string>
+    <string name="setting_storage_desc">Manage project storage and cleanup</string>
+    <string name="setting_about_title">About</string>
+    <string name="setting_about_desc">Version, license, credits</string>
+
+    <!-- Agent descriptions -->
+    <string name="agent_opencode_desc">OpenCode\'s native agent — full feature set with Code Mode, subagents, and all tools.</string>
+    <string name="agent_deepseek_desc">DeepSeek Coder — specialized for code generation and understanding.</string>
+    <string name="agent_claude_desc">Anthropic Claude Code — advanced reasoning and multi-modal capabilities.</string>
+    <string name="agent_pi_desc">Pi Agent — conversational coding assistant with multi-modal support.</string>
+    <string name="agent_custom_desc">Custom agent — configure your own endpoint, API key, and model.</string>
+
+    <!-- Model tabs -->
+    <string name="model_tab_cloud">Cloud API</string>
+    <string name="model_tab_gguf">Local GGUF</string>
+    <string name="model_tab_hybrid">Hybrid</string>
+    <string name="model_api_key_hint">sk-…</string>
+    <string name="model_endpoint_hint">https://api.example.com/v1</string>
+    <string name="model_name_hint">claude-sonnet-5-5</string>
+    <string name="model_gguf_path_hint">/storage/emulated/0/Models/model.gguf</string>
+    <string name="model_save">Save Model Config</string>
+
+    <!-- Sessions -->
+    <string name="session_new_title">Start New Session</string>
+    <string name="session_new_desc">Fresh conversation with the agent</string>
+    <string name="session_compact">Compact</string>
+    <string name="session_fork">Fork</string>
+    <string name="session_delete">Delete</string>
+
+    <!-- About -->
+    <string name="about_version">Version: 0.1.0</string>
+    <string name="about_license">License: MIT</string>
+    <string name="about_min_sdk">Min SDK: Android 8.0 (API 26)</string>
+    <string name="about_copyright">© 2026 OpenCode Android</string>
+
+    <!-- Messages -->
+    <string name="message_no_chat">No messages yet. Send a message to start chatting with your coding agent.</string>
+    <string name="message_loading">Loading…</string>
+    <string name="message_error_unknown">An unexpected error occurred.</string>
+    <string name="message_permission_requested">A permission is required for this action.</string>
+
+    <!-- Notification channels -->
+    <string name="notif_channel_engine">Engine Running</string>
+    <string name="notif_channel_engine_desc">Shows when the coding agent engine is running</string>
+    <string name="notif_channel_events">Coding Events</string>
+    <string name="notif_channel_events_desc">Notifications for agent events</string>
+</resources>

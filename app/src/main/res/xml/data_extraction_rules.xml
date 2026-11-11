@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  OpenCode Android - Data extraction rules.
+  Controls what is included when the user chooses to transfer data to a new device.
+-->
+<data-extraction-rules>
+    <cloud-backup>
+        <!-- Include Room database -->
+        <include domain="database" path="opencode_db" />
+
+        <!-- Include shared preferences -->
+        <include domain="sharedpref" path="." />
+
+        <!-- Exclude build outputs -->
+        <exclude domain="file" path="build/" />
+    </cloud-backup>
+
+    <!-- Device transfer is the same as full backup -->
+    <device-transfer>
+        <include domain="database" path="opencode_db" />
+        <include domain="sharedpref" path="." />
+        <exclude domain="file" path="build/" />
+    </device-transfer>
+</data-extraction-rules>
