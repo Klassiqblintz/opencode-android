@@ -42,9 +42,6 @@
     <!-- Permissions for app factory -->
     <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
 
-    <!-- Suppress edge-to-edge manifest merger warning — handled in Activity -->
-    <uses-sdk tools:overrideLibrary="androidx.window" />
-
     <application
         android:name=".App"
         android:allowBackup="true"
@@ -63,8 +60,7 @@
             android:exported="true"
             android:theme="@style/Theme.OpenCode"
             android:configChanges="orientation|screenSize|screenLayout|keyboardHidden|mnc|colorMode|density|fontScale|fontWeightMode|fontScale|uiMode|orientation|screenSize|locale"
-            android:windowSoftInputMode="adjustResize"
-            android:fitsSystemWindows="true">
+            android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

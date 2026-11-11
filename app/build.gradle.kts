@@ -7,7 +7,7 @@ plugins {
 
 val compileSdkVersion = 35
 val minSdkVersion = 26
-val targetSdkVersion = 35
+val targetSdkVersion = 34
 val ndkVersion = "28.2.13676358"
 
 android {
