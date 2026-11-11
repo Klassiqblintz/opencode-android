@@ -8,7 +8,6 @@ import androidx.activity.ComponentActivity
 import androidx.activity.SystemBarStyle
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.activity.viewModels
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
@@ -34,16 +33,13 @@ import com.opencode.ui.components.common.LoadingDialog
 import com.opencode.ui.skills.SkillsScreen
 import com.opencode.ui.mcps.McpServersScreen
 import com.opencode.ui.permissions.PermissionsScreen
-import dagger.hilt.android.AndroidEntryPoint
 
 /**
  * Main Activity - entry point for the entire app
  * Handles all permissions, navigation, and app lifecycle
  */
-@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
-    private val viewModel: MainViewModel by viewModels()
     private val snackbarHostState = SnackbarHostState()
 
     // Permission launchers

@@ -2,19 +2,9 @@ package com.opencode.ui.main
 
 import android.util.Log
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
-import com.opencode.engine.AgentType
-import com.opencode.engine.AgentRunMode
-import com.opencode.engine.ModelConfig
-import com.opencode.engine.ModelSource
-import com.opencode.storage.room.OpenCodeDatabase
-import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.launch
-import java.io.File
-import javax.inject.Inject
 
 /**
  * Main ViewModel - manages app-wide state:
@@ -24,15 +14,10 @@ import javax.inject.Inject
  * - Connection mode (local vs remote)
  * - Notification preferences
  */
-@HiltViewModel
-class MainViewModel @Inject constructor(
-    private val database: OpenCodeDatabase,
-) : ViewModel() {
+class MainViewModel : ViewModel() {
 
     private val _uiState = MutableStateFlow(AppUiState())
     val uiState: StateFlow<AppUiState> = _uiState.asStateFlow()
-
-    // Selected agent type
     var selectedAgentType: AgentType? by mutableStateOf(null)
         private set
 

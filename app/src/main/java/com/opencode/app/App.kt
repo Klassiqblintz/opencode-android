@@ -3,7 +3,6 @@ package com.opencode.app
 import android.app.Application
 import android.app.NotificationManager
 import android.content.Context
-import dagger.hilt.android.HiltAndroidApp
 
 /**
  * OpenCode Application - Universal Coding Agent Platform
@@ -29,7 +28,6 @@ import dagger.hilt.android.HiltAndroidApp
  * - Preview panel: WebView for web apps, native launch for compiled APKs
  * - Background service: engine survives app close
  */
-@HiltAndroidApp
 class App : Application() {
 
     override fun onCreate() {
