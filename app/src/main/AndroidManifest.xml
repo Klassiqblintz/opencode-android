@@ -64,7 +64,7 @@
             android:theme="@style/Theme.OpenCode"
             android:configChanges="orientation|screenSize|screenLayout|keyboardHidden|mnc|colorMode|density|fontScale|fontWeightMode|fontScale|uiMode|orientation|screenSize|locale"
             android:windowSoftInputMode="adjustResize"
-            android:fitsSystemWindows="false">
+            android:fitsSystemWindows="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
