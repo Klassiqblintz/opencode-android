@@ -91,7 +91,7 @@ fun SessionsScreen(
                     SessionCard(
                         sessionId = (index + 1).toLong(),
                         title = "Session $index",
-                        status = SessionStatus.IDLE,
+                        status = "IDLE",
                         messageCount = 0,
                         onClick = { /* Open chat */ }
                     )
@@ -105,7 +105,7 @@ fun SessionsScreen(
 private fun SessionCard(
     sessionId: Long,
     title: String,
-    status: SessionStatus,
+    status: String,
     messageCount: Int,
     onClick: () -> Unit,
 ) {
@@ -127,13 +127,14 @@ private fun SessionCard(
                     .size(12.dp)
                     .background(
                         when (status) {
-                            SessionStatus.IDLE -> MaterialTheme.colorScheme.primary
-                            SessionStatus.RUNNING -> MaterialTheme.colorScheme.secondary
-                            SessionStatus.THINKING -> MaterialTheme.colorScheme.tertiary
-                            SessionStatus.WAITING_INPUT -> MaterialTheme.colorScheme.warning
-                            SessionStatus.WAITING_PERMISSION -> MaterialTheme.colorScheme.warning
-                            SessionStatus.COMPLETED -> MaterialTheme.colorScheme.primary
-                            SessionStatus.ERRORED -> MaterialTheme.colorScheme.error
+                            "IDLE" -> MaterialTheme.colorScheme.primary
+                            "RUNNING" -> MaterialTheme.colorScheme.secondary
+                            "THINKING" -> MaterialTheme.colorScheme.tertiary
+                            "WAITING_INPUT" -> MaterialTheme.colorScheme.warning
+                            "WAITING_PERMISSION" -> MaterialTheme.colorScheme.warning
+                            "COMPLETED" -> MaterialTheme.colorScheme.primary
+                            "ERRORED" -> MaterialTheme.colorScheme.error
+                            else -> MaterialTheme.colorScheme.primary
                         },
                         androidx.compose.foundation.shape.CircleShape
                     )
@@ -158,8 +159,4 @@ private fun SessionCard(
             }
         }
     }
-}
-
-enum class SessionStatus {
-    IDLE, RUNNING, THINKING, WAITING_INPUT, WAITING_PERMISSION, COMPLETED, ERRORED
 }

@@ -14,18 +14,8 @@ data class SessionEntity(
 
     val projectId: Long,
     val title: String,
-    val status: SessionStatus = SessionStatus.IDLE,
+    val status: String = "IDLE",
     val messageCount: Int = 0,
     val lastMessageAt: Long = System.currentTimeMillis(),
     val createdAt: Long = System.currentTimeMillis(),
 )
-
-enum class SessionStatus {
-    IDLE,
-    RUNNING,
-    THINKING,
-    WAITING_INPUT,
-    WAITING_PERMISSION,
-    COMPLETED,
-    ERRORED,
-}

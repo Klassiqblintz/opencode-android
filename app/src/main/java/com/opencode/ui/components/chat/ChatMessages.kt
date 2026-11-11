@@ -9,7 +9,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.opencode.storage.entities.MessageEntity
-import com.opencode.storage.entities.MessageRole
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -32,23 +31,26 @@ fun ChatMessages(
         items(messages.size) { index ->
             val message = messages[index]
             when (message.role) {
-                MessageRole.USER -> {
+                "USER" -> {
                     UserMessageBubble(message)
                 }
-                MessageRole.AGENT -> {
+                "AGENT" -> {
                     AgentMessageBubble(message)
                 }
-                MessageRole.TOOL -> {
+                "TOOL_RESULT" -> {
                     ToolResultBubble(message)
                 }
-                MessageRole.ERROR -> {
+                "ERROR" -> {
                     ErrorBubble(message)
                 }
-                MessageRole.PERMISSION -> {
+                "PERMISSION" -> {
                     PermissionRequestBubble(message, onPermissionGrant)
                 }
-                MessageRole.TOOL_CALL -> {
+                "TOOL_CALL" -> {
                     ToolCallBubble(message, onToolExecute)
+                }
+                else -> {
+                    AgentMessageBubble(message)
                 }
             }
         }

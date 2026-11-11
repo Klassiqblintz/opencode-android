@@ -2,7 +2,6 @@ package com.opencode.storage.dao
 
 import androidx.room.*
 import com.opencode.storage.entities.SessionEntity
-import com.opencode.storage.entities.SessionStatus
 
 /**
  * DAO for session operations
@@ -28,7 +27,7 @@ interface SessionDao {
     @Query("UPDATE sessions SET status = :status, lastMessageAt = :timestamp WHERE id = :sessionId")
     suspend fun updateSessionStatus(
         sessionId: Long,
-        status: SessionStatus,
+        status: String,
         timestamp: Long = System.currentTimeMillis()
     )
 

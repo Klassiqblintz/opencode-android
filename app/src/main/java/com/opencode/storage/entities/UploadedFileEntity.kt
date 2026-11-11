@@ -17,19 +17,6 @@ data class UploadedFileEntity(
     val filePath: String,
     val mimeType: String,
     val fileSize: Long,
-    val category: FileUploadCategory,
+    val category: String,
     val uploadTimestamp: Long = System.currentTimeMillis(),
 )
-
-enum class FileUploadCategory {
-    CODE,
-    IMAGE,
-    VIDEO,
-    AUDIO,
-    DOCUMENT,
-    ARCHIVE,
-    BINARY,
-    MODEL,
-    CONFIG,
-    OTHER,
-}

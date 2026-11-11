@@ -2,7 +2,6 @@ package com.opencode.storage.dao
 
 import androidx.room.*
 import com.opencode.storage.entities.MessageEntity
-import com.opencode.storage.entities.MessageRole
 
 /**
  * DAO for message operations
@@ -28,7 +27,7 @@ interface MessageDao {
     @Query("SELECT * FROM messages WHERE sessionId = :sessionId AND role = :role ORDER BY timestamp ASC")
     suspend fun getMessagesByRole(
         sessionId: Long,
-        role: MessageRole
+        role: String
     ): List<MessageEntity>
 
     @Query("DELETE FROM messages WHERE sessionId = :sessionId")

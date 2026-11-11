@@ -13,17 +13,8 @@ data class MessageEntity(
     val id: Long = 0,
 
     val sessionId: Long,
-    val role: MessageRole,
+    val role: String,
     val content: String,
-    val status: String = "",           // "pending", "completed", etc. for tool calls
+    val status: String = "",
     val createdAt: Long = System.currentTimeMillis(),
 )
-
-enum class MessageRole {
-    USER,
-    AGENT,
-    TOOL_CALL,
-    TOOL,
-    ERROR,
-    PERMISSION,
-}
