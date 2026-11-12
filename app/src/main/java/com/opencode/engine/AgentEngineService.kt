@@ -48,12 +48,8 @@ class AgentEngineService : Service() {
                 startForeground(NOTIFICATION_ID, buildEngineNotification("Engine running..."))
             }
             ACTION_STOP_ENGINE -> {
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
-                    stopForeground(STOP_FOREGROUND_MANUAL)
-                } else {
-                    @Suppress("DEPRECATION")
-                    stopForeground(true)
-                }
+                @Suppress("DEPRECATION")
+                stopForeground(true)
                 stopSelf()
             }
             ACTION_PAUSE_ENGINE -> {
@@ -105,12 +101,8 @@ class AgentEngineService : Service() {
     }
 
     override fun onDestroy() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
-            stopForeground(STOP_FOREGROUND_MANUAL)
-        } else {
-            @Suppress("DEPRECATION")
-            stopForeground(true)
-        }
+        @Suppress("DEPRECATION")
+        stopForeground(true)
         val nm = getSystemService(NOTIFICATION_SERVICE) as NotificationManager
         nm.cancel(NOTIFICATION_ID)
         super.onDestroy()
