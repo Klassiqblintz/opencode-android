@@ -79,7 +79,7 @@ class FileUploadManager(private val context: Context) {
                 File(targetDir, subdirectory).mkdirs()
             }
             val uniqueName = getUniqueName(targetDir, subdirectory, fileName)
-            val targetFile = File(targetDir, subdirectory).also { it.mkdirs() }.let {
+            val targetFile = File(targetDir, subdirectory ?: "").also { it.mkdirs() }.let {
                 File(it, uniqueName)
             }
 

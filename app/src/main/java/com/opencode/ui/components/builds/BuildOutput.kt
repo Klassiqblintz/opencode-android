@@ -55,7 +55,6 @@ fun BuildOutput(
                         BuildStatus.CANCELLED -> {
                             Text("CANCELLED", color = Color.Gray, fontWeight = FontWeight.Bold)
                         }
-                        else -> {}
                     }
                 }
             }
