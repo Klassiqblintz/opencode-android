@@ -8,13 +8,19 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.filled.Terminal
+import androidx.compose.material.icons.filled.Web
+import com.opencode.utils.ProjectType
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import androidx.compose.material.icons.Icons
+
+@OptIn(ExperimentalMaterial3Api::class)
+
 import androidx.compose.material.icons.filled.*
 import com.opencode.ui.components.builds.BuildOutput
 import com.opencode.ui.components.builds.BuildStatus
-import com.opencode.utils.ProjectType
 
 @Composable
 fun BuildsScreen(

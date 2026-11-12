@@ -1,6 +1,9 @@
 package com.opencode.ui.main
 
 import androidx.compose.foundation.layout.*
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.filled.Info
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -28,6 +31,7 @@ import com.opencode.ui.permissions.PermissionsScreen
 import com.opencode.ui.projects.import.ProjectImportScreen
 import com.opencode.ui.upload.UploadScreen
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun AppNavigation(
     onNavigateToSettings: () -> Unit = {}

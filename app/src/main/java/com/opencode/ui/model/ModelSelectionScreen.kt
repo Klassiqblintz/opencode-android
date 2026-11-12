@@ -9,8 +9,12 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
-import com.opencode.engine.{AgentType, ModelSource, DefaultModelConfigs}
+import com.opencode.engine.AgentType
+import com.opencode.engine.ModelSource
+import com.opencode.engine.DefaultModelConfigs
+import androidx.compose.ui.text.font.FontWeight
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ModelSelectionScreen(
     onBack: () -> Unit = {},

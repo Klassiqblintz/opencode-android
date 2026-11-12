@@ -15,6 +15,7 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SessionsScreen(
     onBack: (() -> Unit)? = null,
@@ -127,6 +128,7 @@ fun SessionsScreen(
     }
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun SessionCard(
     title: String,

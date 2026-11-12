@@ -11,6 +11,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 @Composable
 fun UploadScreen(
@@ -18,6 +20,7 @@ fun UploadScreen(
     onDismiss: () -> Unit = {},
     onUploadComplete: () -> Unit = {}
 ) {
+    val scope = rememberCoroutineScope()
     var selectedFiles by remember { mutableStateOf<List<String>>(emptyList()) }
     var showProgress by remember { mutableStateOf(false) }
     var uploadResults by remember { mutableStateOf<List<String>>(emptyList()) }
@@ -135,9 +138,10 @@ fun UploadScreen(
 
                 Button(
                     onClick = {
-                        showProgress = true
-                        // Simulate upload
-                        kotlinx.coroutines.delay(2000) {
+                        scope.launch {
+                            showProgress = true
+                            // Simulate upload
+                            delay(2000L)
                             uploadResults = listOf("SUCCESS: file1.kt", "SUCCESS: image.png")
                             showProgress = false
                         }

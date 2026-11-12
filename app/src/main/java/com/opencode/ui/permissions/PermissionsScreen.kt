@@ -14,6 +14,7 @@ import androidx.compose.material.icons.filled.*
 
 enum class PermissionState { ALLOW, ASK, DENY }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun PermissionsScreen(
     onBack: () -> Unit = {},
@@ -136,6 +137,7 @@ data class PermissionItem(
     val icon: androidx.compose.ui.graphics.vector.ImageVector
 )
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun PermissionItemCard(
     item: PermissionItem,

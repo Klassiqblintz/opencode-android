@@ -11,6 +11,7 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun McpServersScreen(
     onBack: () -> Unit = {},

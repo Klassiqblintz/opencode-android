@@ -8,12 +8,19 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.filled.Code
+import androidx.compose.material.icons.filled.Devices
+import androidx.compose.material.icons.filled.Extension
+import androidx.compose.material.icons.filled.Psychology
+import androidx.compose.material.icons.filled.Settings
+import androidx.compose.ui.unit.dp
 import androidx.compose.material.icons.filled.*
 import com.opencode.engine.AgentType
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun AgentSelectionScreen(
     onBack: () -> Unit = {},

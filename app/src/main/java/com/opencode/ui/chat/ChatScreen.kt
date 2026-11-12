@@ -12,6 +12,7 @@ import androidx.compose.material.icons.filled.*
 import com.opencode.ui.chat.MessageEntity
 import com.opencode.ui.components.chat.ChatMessages
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ChatScreen(
     onBack: (() -> Unit)? = null,

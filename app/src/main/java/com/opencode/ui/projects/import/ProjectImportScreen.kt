@@ -12,6 +12,8 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
 import com.opencode.utils.ProjectType
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 @Composable
 fun ProjectImportScreen(
@@ -19,6 +21,7 @@ fun ProjectImportScreen(
     onDismiss: () -> Unit = {},
     onImported: (Long) -> Unit = {}
 ) {
+    val scope = rememberCoroutineScope()
     var importMode by remember { mutableStateOf<ImportMode?>(null) }
     var isImporting by remember { mutableStateOf(false) }
     var progress by remember { mutableStateOf(0f) }
@@ -156,9 +159,10 @@ fun ProjectImportScreen(
                         )
                         Spacer(Modifier.height(8.dp))
                         Button(onClick = {
-                            isImporting = true
-                            // Simulate progress
-                            kotlinx.coroutines.delay(2500) {
+                            scope.launch {
+                                isImporting = true
+                                // Simulate progress
+                                delay(2500L)
                                 progress = 1f
                                 detectedType = ProjectType.KOTLIN_COMPOSE
                                 isImporting = false
@@ -290,8 +294,9 @@ fun ProjectImportScreen(
                         )
                         Spacer(Modifier.height(8.dp))
                         Button(onClick = {
-                            isImporting = true
-                            kotlinx.coroutines.delay(2000) {
+                            scope.launch {
+                                isImporting = true
+                                delay(2000L)
                                 progress = 1f
                                 detectedType = ProjectType.KOTLIN_COMPOSE
                                 isImporting = false

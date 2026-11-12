@@ -11,6 +11,7 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SettingsScreen(
     onBack: () -> Unit = {},
@@ -65,7 +66,7 @@ fun SettingsScreen(
                     }
                     Switch(
                         checked = true,
-                        onValueChange = {}
+                        onCheckedChange = {}
                     )
                 }
             }
@@ -126,6 +127,7 @@ fun SettingsScreen(
     }
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun SettingsItem(
     icon: androidx.compose.ui.graphics.vector.ImageVector,
