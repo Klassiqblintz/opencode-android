@@ -10,7 +10,7 @@ import android.os.Binder
 import android.os.Build
 import android.os.IBinder
 import androidx.core.app.NotificationCompat
-import com.opencode.app.App
+import com.opencode.App
 
 class AgentEngineService : Service() {
 
@@ -71,12 +71,12 @@ class AgentEngineService : Service() {
                 nm.notify(
                     NOTIFICATION_ID + 1,
                     NotificationCompat.Builder(this, App.CHANNEL_CODING_EVENTS)
-                        .setSmallIcon(android.R.drawable.ic_dialog_info)
                         .setContentTitle(title)
                         .setContentText(message)
                         .setColor(color)
                         .setAutoCancel(true)
                         .setPriority(NotificationCompat.PRIORITY_HIGH)
+                        .setSmallIcon(android.R.drawable.ic_dialog_info)
                         .build()
                 )
             }
@@ -87,12 +87,12 @@ class AgentEngineService : Service() {
                 nm.notify(
                     NOTIFICATION_ID + 2,
                     NotificationCompat.Builder(this, App.CHANNEL_CODING_EVENTS)
-                        .setSmallIcon(android.R.drawable.ic_dialog_info)
                         .setContentTitle(title)
                         .setContentText(message)
                         .setStyle(NotificationCompat.BigTextStyle().bigText(message))
                         .setAutoCancel(true)
                         .setPriority(NotificationCompat.PRIORITY_HIGH)
+                        .setSmallIcon(android.R.drawable.ic_dialog_info)
                         .build()
                 )
             }
@@ -145,11 +145,11 @@ class AgentEngineService : Service() {
         )
 
         return NotificationCompat.Builder(this, App.CHANNEL_ENGINE_RUNNING)
-            .setSmallIcon(android.R.drawable.ic_menu_report_image)
             .setContentTitle("OpenCode Engine")
             .setContentText(text)
             .setOngoing(true)
             .setPriority(NotificationCompat.PRIORITY_LOW)
+            .setSmallIcon(android.R.drawable.ic_menu_report_image)
             .setContentIntent(pendingIntent)
             .build()
     }
