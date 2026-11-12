@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary colors -->
+    <color name="primary">#1E88E5</color>
+    <color name="primaryContainer">#D3E3FD</color>
+    <color name="secondary">#707D8B</color>
+    <color name="secondaryContainer">#D7E3F1</color>
+    <color name="tertiary">#7E57C2</color>
+    <color name="tertiaryContainer">#E8DEFF</color>
+    <color name="error">#D32F2F</color>
+    <color name="errorContainer">#FFDAD6</color>
+
+    <!-- Background and surface colors -->
+    <color name="background">#FAFAFA</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="surfaceVariant">#E7E0EC</color>
+
+    <!-- Text colors -->
+    <color name="onPrimary">#FFFFFF</color>
+    <color name="onSecondary">#FFFFFF</color>
+    <color name="onTertiary">#FFFFFF</color>
+    <color name="onBackground">#1C1B1F</color>
+    <color name="onSurface">#1C1B1F</color>
+
+    <!-- Agent accent colors -->
+    <color name="agent_opencode">#1E88E5</color>
+    <color name="agent_deepseek">#7C4DFF</color>
+    <color name="agent_claude">#7E57C2</color>
+    <color name="agent_pi">#00BFA5</color>
+    <color name="agent_custom">#607D8B</color>
+
+    <!-- Terminal colors -->
+    <color name="terminal_bg">#1E1E1E</color>
+    <color name="terminal_text">#F8F8F2</color>
+    <color name="terminal_prompt">#448AFF</color>
+    <color name="terminal_error">#FF5555</color>
+    <color name="terminal_success">#50FA7B</color>
+    <color name="terminal_warning">#F1FA8C</color>
+
+    <!-- Status colors -->
+    <color name="status_idle">#1E88E5</color>
+    <color name="status_running">#00BFA5</color>
+    <color name="status_thinking">#7C4DFF</color>
+    <color name="status_waiting_input">#F9A825</color>
+    <color name="status_completed">#1E88E5</color>
+    <color name="status_errored">#D32F2F</color>
+    <color name="status_paused">#707D8B</color>
+    <color name="status_waiting_permission">#F9A825</color>
+</resources>
