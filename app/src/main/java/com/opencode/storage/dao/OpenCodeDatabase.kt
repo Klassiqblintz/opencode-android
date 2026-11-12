@@ -1,10 +1,9 @@
-package com.opencode.storage.room
+package com.opencode.storage.dao
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.opencode.storage.dao.*
 import com.opencode.storage.entities.*
 
 /**

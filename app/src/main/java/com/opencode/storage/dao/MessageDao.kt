@@ -2,7 +2,7 @@ package com.opencode.storage.dao
 
 import androidx.room.*
 import com.opencode.storage.entities.MessageEntity
-import androidx.lifecycle.Flow
+import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface MessageDao {
