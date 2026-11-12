@@ -15,13 +15,11 @@ import androidx.compose.material.icons.filled.Web
 import com.opencode.utils.ProjectType
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-
-@OptIn(ExperimentalMaterial3Api::class)
-
 import androidx.compose.material.icons.filled.*
 import com.opencode.ui.components.builds.BuildOutput
 import com.opencode.ui.components.builds.BuildStatus
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun BuildsScreen(
     onBack: (() -> Unit)? = null,

@@ -71,7 +71,7 @@ dependencies {
     implementation 'androidx.compose.animation:animation'
 
     // Activity Compose
-    implementation 'androidx.activity:activity-compose:1.8.2'
+    implementation 'androidx.activity:activity-compose:1.7.2'
 
     // Core & AppCompat
     implementation 'androidx.core:core-ktx:1.12.0'

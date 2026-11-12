@@ -15,6 +15,7 @@ import com.opencode.utils.ProjectType
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ProjectImportScreen(
     onBack: () -> Unit = {},
@@ -180,7 +181,7 @@ fun ProjectImportScreen(
                         Column(modifier = Modifier.padding(12.dp)) {
                             Text("Importing... ${"%.0f".format(progress * 100)}%")
                             LinearProgressIndicator(
-                                progress = { progress },
+                                progress = progress,
                                 modifier = Modifier.fillMaxWidth()
                             )
                         }

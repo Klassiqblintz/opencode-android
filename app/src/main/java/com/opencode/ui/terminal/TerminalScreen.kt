@@ -55,8 +55,7 @@ fun TerminalScreen(
                 currentInput = ""
             },
             onClear = { history = emptyList() },
-            onBack = onBack,
-            modifier = Modifier.padding(paddingValues)
+            onBack = onBack
         )
     }
 }
