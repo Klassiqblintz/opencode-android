@@ -1,4 +1,4 @@
-package com.opencode.app
+package com.opencode
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
