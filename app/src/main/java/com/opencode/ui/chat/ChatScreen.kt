@@ -8,7 +8,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
-import com.opencode.storage.entities.MessageEntity
+import com.opencode.ui.chat.MessageEntity
 import com.opencode.ui.components.chat.ChatMessages
 
 @Composable
