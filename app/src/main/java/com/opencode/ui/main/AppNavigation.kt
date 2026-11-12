@@ -3,8 +3,12 @@ package com.opencode.ui.main
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -16,6 +20,13 @@ import com.opencode.ui.builds.BuildsScreen
 import com.opencode.ui.settings.SettingsScreen
 import com.opencode.ui.terminal.TerminalScreen
 import com.opencode.ui.sessions.SessionsScreen
+import com.opencode.ui.agent.AgentSelectionScreen
+import com.opencode.ui.model.ModelSelectionScreen
+import com.opencode.ui.mcps.McpServersScreen
+import com.opencode.ui.skills.SkillsScreen
+import com.opencode.ui.permissions.PermissionsScreen
+import com.opencode.ui.projects.import.ProjectImportScreen
+import com.opencode.ui.upload.UploadScreen
 
 @Composable
 fun AppNavigation(

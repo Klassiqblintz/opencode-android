@@ -8,6 +8,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
 import com.opencode.ui.components.builds.BuildOutput
@@ -21,6 +23,7 @@ fun BuildsScreen(
     onOpenPreview: () -> Unit = {},
     onOpenSettings: () -> Unit = {}
 ) {
+    val scope = rememberCoroutineScope()
     var selectedType by remember { mutableStateOf(ProjectType.KOTLIN_COMPOSE) }
     var buildVariant by remember { mutableStateOf("RELEASE") }
     var isBuilding by remember { mutableStateOf(false) }
@@ -128,10 +131,11 @@ fun BuildsScreen(
             // Build button
             Button(
                 onClick = {
-                    isBuilding = true
-                    buildStatus = BuildStatus.IN_PROGRESS
-                    // Simulate build
-                    kotlinx.coroutines.delay(3000) {
+                    scope.launch {
+                        isBuilding = true
+                        buildStatus = BuildStatus.IN_PROGRESS
+                        // Simulate build
+                        delay(3000L)
                         buildOutput = "BUILD SUCCESSFUL in 3s\nAPK generated at: app/build/outputs/apk/release/app-release.apk"
                         buildStatus = BuildStatus.SUCCESS
                         isBuilding = false

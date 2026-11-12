@@ -125,4 +125,14 @@ object DefaultModelConfigs {
         enableVision = false,
         modelSource = ModelSource.HYBRID
     )
+
+    fun allDefaults(): Map<AgentType, ModelConfig> {
+        return mapOf(
+            AgentType.OPENCODE to defaultOpenCodeConfig(),
+            AgentType.DEEPSEEK to defaultDeepSeekConfig(),
+            AgentType.CLAUDE to defaultClaudeConfig(),
+            AgentType.PI to defaultPiConfig(),
+            AgentType.CUSTOM to defaultCustomConfig(),
+        )
+    }
 }
