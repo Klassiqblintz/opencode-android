@@ -76,6 +76,7 @@ fun AgentSelectionScreen(
     }
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun AgentCard(agent: AgentType, onClick: () -> Unit) {
     val accentColor = Color(agent.accentColor)

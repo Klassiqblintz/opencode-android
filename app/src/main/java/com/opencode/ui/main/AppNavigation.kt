@@ -184,6 +184,7 @@ fun AppNavigation(
 }
 
 // Simple placeholder screens for dialogs
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun AboutScreen(onBack: () -> Unit) {
     Scaffold(
@@ -232,6 +233,7 @@ private fun AboutScreen(onBack: () -> Unit) {
     }
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun StorageScreen(onBack: () -> Unit, onDismiss: () -> Unit) {
     Scaffold(
