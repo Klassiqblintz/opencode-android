@@ -48,8 +48,8 @@ class AgentEngineService : Service() {
                 startForeground(NOTIFICATION_ID, buildEngineNotification("Engine running..."))
             }
             ACTION_STOP_ENGINE -> {
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-                    stopForeground(FOREGROUND_SERVICE_INFO_NOT_NEEDED)
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+                    stopForeground(STOP_FOREGROUND_MANUAL)
                 } else {
                     @Suppress("DEPRECATION")
                     stopForeground(true)
@@ -105,8 +105,8 @@ class AgentEngineService : Service() {
     }
 
     override fun onDestroy() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-            stopForeground(FOREGROUND_SERVICE_INFO_NOT_NEEDED)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            stopForeground(STOP_FOREGROUND_MANUAL)
         } else {
             @Suppress("DEPRECATION")
             stopForeground(true)
