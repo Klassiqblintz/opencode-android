@@ -2,6 +2,7 @@ package com.opencode.storage.dao
 
 import androidx.room.*
 import com.opencode.storage.entities.ProjectEntity
+import androidx.lifecycle.Flow
 
 @Dao
 interface ProjectDao {
@@ -16,7 +17,7 @@ interface ProjectDao {
     suspend fun deleteProject(project: ProjectEntity)
 
     @Query("SELECT * FROM projects ORDER BY lastUsed DESC")
-    fun getAllProjects(): androidx.room.Flow<List<ProjectEntity>>
+    fun getAllProjects(): Flow<List<ProjectEntity>>
 
     @Query("SELECT * FROM projects WHERE id = :id")
     suspend fun getProjectById(id: Long): ProjectEntity?

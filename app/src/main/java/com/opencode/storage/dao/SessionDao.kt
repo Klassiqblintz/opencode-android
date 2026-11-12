@@ -2,6 +2,7 @@ package com.opencode.storage.dao
 
 import androidx.room.*
 import com.opencode.storage.entities.SessionEntity
+import androidx.lifecycle.Flow
 
 @Dao
 interface SessionDao {
@@ -16,7 +17,7 @@ interface SessionDao {
     suspend fun deleteSession(session: SessionEntity)
 
     @Query("SELECT * FROM sessions WHERE projectId = :projectId ORDER BY lastMessageAt DESC")
-    fun getSessionsForProject(projectId: Long): androidx.room.Flow<List<SessionEntity>>
+    fun getSessionsForProject(projectId: Long): Flow<List<SessionEntity>>
 
     @Query("SELECT * FROM sessions WHERE id = :id")
     suspend fun getSessionById(id: Long): SessionEntity?

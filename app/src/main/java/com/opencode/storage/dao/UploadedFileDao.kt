@@ -2,6 +2,7 @@ package com.opencode.storage.dao
 
 import androidx.room.*
 import com.opencode.storage.entities.UploadedFileEntity
+import androidx.lifecycle.Flow
 
 @Dao
 interface UploadedFileDao {
@@ -16,7 +17,7 @@ interface UploadedFileDao {
     suspend fun deleteFile(file: UploadedFileEntity)
 
     @Query("SELECT * FROM uploaded_files WHERE projectId = :projectId ORDER BY uploadTimestamp DESC")
-    fun getFilesForProject(projectId: Long): androidx.room.Flow<List<UploadedFileEntity>>
+    fun getFilesForProject(projectId: Long): Flow<List<UploadedFileEntity>>
 
     @Query("SELECT * FROM uploaded_files WHERE id = :id")
     suspend fun getFileById(id: Long): UploadedFileEntity?

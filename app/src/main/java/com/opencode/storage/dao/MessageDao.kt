@@ -2,6 +2,7 @@ package com.opencode.storage.dao
 
 import androidx.room.*
 import com.opencode.storage.entities.MessageEntity
+import androidx.lifecycle.Flow
 
 @Dao
 interface MessageDao {
@@ -19,10 +20,10 @@ interface MessageDao {
     suspend fun deleteMessage(message: MessageEntity)
 
     @Query("SELECT * FROM messages WHERE sessionId = :sessionId ORDER BY createdAt ASC")
-    fun getMessagesForSession(sessionId: Long): androidx.room.Flow<List<MessageEntity>>
+    fun getMessagesForSession(sessionId: Long): Flow<List<MessageEntity>>
 
     @Query("SELECT * FROM messages WHERE sessionId = :sessionId AND role = :role ORDER BY createdAt ASC")
-    fun getMessagesByRole(sessionId: Long, role: String): androidx.room.Flow<List<MessageEntity>>
+    fun getMessagesByRole(sessionId: Long, role: String): Flow<List<MessageEntity>>
 
     @Query("DELETE FROM messages WHERE sessionId = :sessionId")
     suspend fun clearMessagesForSession(sessionId: Long)

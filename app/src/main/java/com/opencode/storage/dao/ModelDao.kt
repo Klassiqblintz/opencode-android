@@ -2,6 +2,7 @@ package com.opencode.storage.dao
 
 import androidx.room.*
 import com.opencode.storage.entities.ModelEntity
+import androidx.lifecycle.Flow
 
 @Dao
 interface ModelDao {
@@ -16,7 +17,7 @@ interface ModelDao {
     suspend fun deleteModel(model: ModelEntity)
 
     @Query("SELECT * FROM models WHERE agentType = :agentType ORDER BY createdAt DESC")
-    fun getModelsForAgent(agentType: String): androidx.room.Flow<List<ModelEntity>>
+    fun getModelsForAgent(agentType: String): Flow<List<ModelEntity>>
 
     @Query("SELECT * FROM models WHERE id = :id")
     suspend fun getModelById(id: Long): ModelEntity?
