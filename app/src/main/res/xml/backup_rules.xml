@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  OpenCode Android - Backup rules.
+  Controls what data is included in device backups.
+-->
+<full-backup-content>
+    <!-- Include Room database -->
+    <include domain="database" path="opencode_db" />
+
+    <!-- Include shared preferences -->
+    <include domain="sharedpref" path="." />
+
+    <!-- Exclude build outputs (too large) -->
+    <exclude domain="file" path="build/" />
+    <exclude domain="file" path="app/build/" />
+</full-backup-content>

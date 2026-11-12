@@ -1,0 +1,29 @@
+# Built applications
+*.apk
+
+# Gradle
+.gradle/
+build/
+app/build/
+
+# Android Studio
+.idea/
+*.iml
+*.iws
+*.ipr
+.androidstudio*
+
+# Keystores
+*.jks
+*.keystore
+
+# Native
+!app/src/main/jni/CMakeLists.txt
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary
+*.tmp
+*.swp
